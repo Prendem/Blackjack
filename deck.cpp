@@ -14,7 +14,7 @@ Deck::Deck() : m_topcard{ 0 }
 			++m_topcard;
 		}
 	srand(std::time(0));
-	rand();
+	rand();	//due to a bug in the VS2017 implimentation of rand, it must be called once and the value discarded
 	shuffle();
 	m_topcard = 0;
 }
