@@ -13,17 +13,8 @@ int Hand::maxScore()
 {
 	if (!m_hasace || minScore() + 10 > 21)
 		return minScore();
-	int score{ 0 };
-	for (Card card : m_hand)
-	{
-		if (static_cast<int>(card.rank) < 9)
-			score += (static_cast<int>(card.rank) + 2);
-		if (card.rank == Rank::JACK || card.rank == Rank::QUEEN || card.rank == Rank::KING)
-			score += 10;
-		if (card.rank == Rank::ACE)
-			score += 11;
-	}
-	return score;
+	else
+		return minScore() + 10;
 }
 
 int Hand::visibleMaxScore()
