@@ -2,8 +2,6 @@
 #define DECK_H
 #include <vector>
 
-class Hand;
-
 enum class Suit
 {
 	CLUBS,
