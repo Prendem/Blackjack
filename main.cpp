@@ -18,8 +18,7 @@ bool dealerHit(Hand &player, Hand &dealer, bool playerstanding)
 int main()
 {
 	Deck deck;
-	bool playgame{ true };
-	while (playgame)
+	while (true)
 	{
 		Hand player(deck.deal(), deck.deal(), false);
 		Hand dealer(deck.deal(), deck.deal(), true);
